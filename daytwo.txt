@@ -1,0 +1,837 @@
+dbit@it6-31:~$ cd s*
+bash: cd: s*: No such file or directory
+dbit@it6-31:~$ cd D*
+dbit@it6-31:~/Desktop$ cd s*
+dbit@it6-31:~/Desktop/sushree$ ls
+README.md  test.txt
+dbit@it6-31:~/Desktop/sushree$ cd ..
+dbit@it6-31:~/Desktop$ ls -al
+total 12
+drwxr-xr-x  3 dbit dbit 4096 Jan  2 15:08 .
+drwxr-xr-x 20 dbit dbit 4096 Jan  3 09:59 ..
+drwxrwxr-x  3 dbit dbit 4096 Jan  2 17:01 sushree
+dbit@it6-31:~/Desktop$ rm -rf sushree
+dbit@it6-31:~/Desktop$ mkdir daytwo
+dbit@it6-31:~/Desktop$ cd d*
+dbit@it6-31:~/Desktop/daytwo$ git init
+Initialized empty Git repository in /home/dbit/Desktop/daytwo/.git/
+dbit@it6-31:~/Desktop/daytwo$ touch README.md
+dbit@it6-31:~/Desktop/daytwo$ nano README.md
+dbit@it6-31:~/Desktop/daytwo$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+dbit@it6-31:~/Desktop/daytwo$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+dbit@it6-31:~/Desktop/daytwo$ git add README.md
+dbit@it6-31:~/Desktop/daytwo$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README.md
+
+dbit@it6-31:~/Desktop/daytwo$ git commit-m 'Added Readme'
+git: 'commit-m' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit-tree
+dbit@it6-31:~/Desktop/daytwo$ git commit -m 'Added Readme'
+[master (root-commit) 2de865d] Added Readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+dbit@it6-31:~/Desktop/daytwo$ git log
+commit 2de865da385dd8961e9307d0253731eda2ed3ce4
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 10:18:17 2018 +0530
+
+    Added Readme
+dbit@it6-31:~/Desktop/daytwo$ cd ..
+dbit@it6-31:~/Desktop$ git clone https://github.com/sushreesatapathy/my-preoject-demo
+Cloning into 'my-preoject-demo'...
+remote: Counting objects: 21, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 21 (delta 1), reused 16 (delta 1), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+Checking connectivity... done.
+dbit@it6-31:~/Desktop$ cd m*
+dbit@it6-31:~/Desktop/my-preoject-demo$ git log
+commit 13ddaede8724bc52e624bf226d776b542ceec8da
+Author: sushree <sushree@dbit.in>
+Date:   Tue Jan 2 17:03:21 2018 +0530
+
+    added sttp day 1 work
+
+commit 4e7e4863714f4861992a422a6eb98abfd44aa17a
+Author: sushree <sushree@dbit.in>
+Date:   Tue Jan 2 16:55:32 2018 +0530
+
+    changes to readme from local
+
+commit fd0edf71c68d0b6462319c39ed6c58a238ffd950
+Author: sushreesatapathy <sushree@dbit.in>
+Date:   Tue Jan 2 16:49:40 2018 +0530
+
+    Update README.md
+
+commit 88a7c2c6cf344eeba20dffc7739374dd4a88501e
+Author: sushreesatapathy <sushree@dbit.in>
+Date:   Tue Jan 2 16:48:45 2018 +0530
+
+    created a readme file
+
+commit e990deadc66466b48f374161487d70a3d93ff220
+dbit@it6-31:~/Desktop/my-preoject-demo$ git clone https://github.com/netchampfaris/my-project-demo
+Cloning into 'my-project-demo'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 15 (delta 1), reused 13 (delta 1), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+Checking connectivity... done.
+dbit@it6-31:~/Desktop/my-preoject-demo$ cd ..
+dbit@it6-31:~/Desktop$ git clone https://github.com/netchampfaris/my-project-demoCloning into 'my-project-demo'...
+remote: Counting objects: 18, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 18 (delta 2), reused 16 (delta 2), pack-reused 0
+Unpacking objects: 100% (18/18), done.
+Checking connectivity... done.
+dbit@it6-31:~/Desktop$ cd my*
+dbit@it6-31:~/Desktop/my-preoject-demo$ cd..
+cd..: command not found
+dbit@it6-31:~/Desktop/my-preoject-demo$ cd ..
+dbit@it6-31:~/Desktop$ cd my-project-demo
+dbit@it6-31:~/Desktop/my-project-demo$ ls
+README.md  test.txt
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md
+dbit@it6-31:~/Desktop/my-project-demo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbit@it6-31:~/Desktop/my-project-demo$ git add README.md 
+dbit@it6-31:~/Desktop/my-project-demo$ git commit -m 'Modified Faris's file'
+> q
+> 
+> 
+> ^C
+dbit@it6-31:~/Desktop/my-project-demo$ git commit -m "Modified Faris's README file"
+[master 3ff54f5] Modified Faris's README file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dbit@it6-31:~/Desktop/my-project-demo$ git log
+commit 3ff54f56ac762c5b275142f6b1b6a8836abf0e80
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 10:44:38 2018 +0530
+
+    Modified Faris's README file
+
+commit 1529875166e6d2216ad1d8bffe2fdbfc66763434
+Author: Jithin <jithin@dbit.in>
+Date:   Wed Jan 3 10:39:20 2018 +0530
+
+    changes made by Jithin Isaac
+
+commit 9e81a8f8492f8eeb3f491212f0cf9e53f5981bac
+Author: Faris Ansari <netchamp.faris@gmail.com>
+Date:   Tue Jan 2 16:56:06 2018 +0530
+
+    Added author name in readme
+
+commit d77133f1393abf13b8a5ab90423497ecba99b78f
+Author: Faris Ansari <netchampfaris@users.noreply.github.com>
+Date:   Tue Jan 2 16:48:08 2018 +0530
+
+    Added a Readme file for other people to see
+
+commit 05e00c56a8fcc3dd65e677460f2b93811beac6c4
+dbit@it6-31:~/Desktop/my-project-demo$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+To https://github.com/netchampfaris/my-project-demo
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/netchampfaris/my-project-demo'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+dbit@it6-31:~/Desktop/my-project-demo$ git log
+commit 3ff54f56ac762c5b275142f6b1b6a8836abf0e80
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 10:44:38 2018 +0530
+
+    Modified Faris's README file
+
+commit 1529875166e6d2216ad1d8bffe2fdbfc66763434
+Author: Jithin <jithin@dbit.in>
+Date:   Wed Jan 3 10:39:20 2018 +0530
+
+    changes made by Jithin Isaac
+
+commit 9e81a8f8492f8eeb3f491212f0cf9e53f5981bac
+Author: Faris Ansari <netchamp.faris@gmail.com>
+Date:   Tue Jan 2 16:56:06 2018 +0530
+
+    Added author name in readme
+
+commit d77133f1393abf13b8a5ab90423497ecba99b78f
+Author: Faris Ansari <netchampfaris@users.noreply.github.com>
+Date:   Tue Jan 2 16:48:08 2018 +0530
+
+    Added a Readme file for other people to see
+
+commit 05e00c56a8fcc3dd65e677460f2b93811beac6c4
+dbit@it6-31:~/Desktop/my-project-demo$ 
+dbit@it6-31:~/Desktop/my-project-demo$ git pull
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (4/4), done.
+Unpacking objects: 100% (7/7), done.
+remote: Total 7 (delta 2), reused 7 (delta 2), pack-reused 0
+From https://github.com/netchampfaris/my-project-demo
+   1529875..cf94f6e  master     -> origin/master
+Auto-merging README.md
+Merge made by the 'recursive' strategy.
+ .Rhistory | 0
+ README.md | 6 ++++++
+ 2 files changed, 6 insertions(+)
+ create mode 100644 .Rhistory
+dbit@it6-31:~/Desktop/my-project-demo$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+To https://github.com/netchampfaris/my-project-demo
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/netchampfaris/my-project-demo'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+dbit@it6-31:~/Desktop/my-project-demo$ git pull
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 4), reused 12 (delta 4), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+From https://github.com/netchampfaris/my-project-demo
+   cf94f6e..6ac7bd4  master     -> origin/master
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+dbit@it6-31:~/Desktop/my-project-demo$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 2 and 4 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md
+dbit@it6-31:~/Desktop/my-project-demo$ git add .
+dbit@it6-31:~/Desktop/my-project-demo$ git commit
+[master 2289519] Merge branch 'master' of https://github.com/netchampfaris/my-project-demo
+dbit@it6-31:~/Desktop/my-project-demo$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+To https://github.com/netchampfaris/my-project-demo
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/netchampfaris/my-project-demo'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md
+dbit@it6-31:~/Desktop/my-project-demo$ y
+y: command not found
+dbit@it6-31:~/Desktop/my-project-demo$ git pull
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 2), reused 6 (delta 2), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/netchampfaris/my-project-demo
+   6ac7bd4..05ef003  master     -> origin/master
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano README.md
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md
+dbit@it6-31:~/Desktop/my-project-demo$ git pull
+error: Pull is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+dbit@it6-31:~/Desktop/my-project-demo$ git clone https://github.com/netchampfaris/my-project-demo
+fatal: could not create work tree dir 'my-project-demo': No such file or directory
+dbit@it6-31:~/Desktop/my-project-demo$ git clone https://github.com/netchampfaris/my-project-demo
+fatal: could not create work tree dir 'my-project-demo': No such file or directory
+dbit@it6-31:~/Desktop/my-project-demo$ cd .. 
+dbit@it6-31:~/Desktop$ git clone https://github.com/netchampfaris/my-project-demoCloning into 'my-project-demo'...
+remote: Counting objects: 42, done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 42 (delta 10), reused 40 (delta 10), pack-reused 0
+Unpacking objects: 100% (42/42), done.
+Checking connectivity... done.
+dbit@it6-31:~/Desktop$ cd my-project-demo/
+dbit@it6-31:~/Desktop/my-project-demo$ ls
+README.md  test.txt
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md 
+dbit@it6-31:~/Desktop/my-project-demo$ git add .
+dbit@it6-31:~/Desktop/my-project-demo$ git commit -m "added in faris's README"
+[master 204a103] added in faris's README
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+dbit@it6-31:~/Desktop/my-project-demo$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 377 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/netchampfaris/my-project-demo
+   05ef003..204a103  master -> master
+dbit@it6-31:~/Desktop/my-project-demo$ git branch sushree
+dbit@it6-31:~/Desktop/my-project-demo$ git branch
+* master
+  sushree
+dbit@it6-31:~/Desktop/my-project-demo$ git checkout sushree
+Switched to branch 'sushree'
+dbit@it6-31:~/Desktop/my-project-demo$ gti branch
+No command 'gti' found, did you mean:
+ Command 'git' from package 'git' (main)
+ Command 'gtg' from package 'gtg' (universe)
+ Command 'gtf' from package 'xserver-xorg-core' (main)
+ Command 'gt5' from package 'gt5' (universe)
+ Command 'gtv' from package 'smpeg-gtv' (universe)
+ Command 'bti' from package 'bti' (universe)
+ Command 'ti' from package 'ticgit' (universe)
+ Command 'gsi' from package 'gambc' (universe)
+ Command 'gt' from package 'genometools' (universe)
+ Command 'gri' from package 'gri' (universe)
+gti: command not found
+dbit@it6-31:~/Desktop/my-project-demo$ git status
+On branch sushree
+nothing to commit, working directory clean
+dbit@it6-31:~/Desktop/my-project-demo$ git branch
+  master
+* sushree
+dbit@it6-31:~/Desktop/my-project-demo$ git log
+commit 204a103fdbc93d94198838eb3503979b845ef4f2
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 10:57:12 2018 +0530
+
+    added in faris's README
+
+commit 05ef00338fa0f37c5728c7fe20a574112a82c93d
+Merge: 76d4102 6ac7bd4
+Author: lakshmi <luckyrocks6644@yahoo.com>
+Date:   Wed Jan 3 10:49:24 2018 +0530
+
+    change done
+
+commit 76d4102eb701dd75bcd9ec07beef6fd63a28f054
+Author: lakshmi <luckyrocks6644@yahoo.com>
+Date:   Wed Jan 3 10:47:57 2018 +0530
+
+    new change
+
+commit 6ac7bd412b3c38d4dcd37e17ab12b710211d140c
+Merge: 4d4ab76 0931dc5
+Author: it6-43 <mayuraka@gmail.com>
+Date:   Wed Jan 3 10:47:14 2018 +0530
+
+    Merge branch 'master' of https://github.com/netchampfaris/my-project-demo
+dbit@it6-31:~/Desktop/my-project-demo$ ls
+README.md  test.txt
+dbit@it6-31:~/Desktop/my-project-demo$ nano test.txt
+dbit@it6-31:~/Desktop/my-project-demo$ git add .
+dbit@it6-31:~/Desktop/my-project-demo$ git commit -m 'changing in branch sushree'[sushree c2942fb] changing in branch sushree
+ 1 file changed, 2 insertions(+)
+dbit@it6-31:~/Desktop/my-project-demo$ git log
+commit c2942fbcd6f4a3f30d3af0813289fedd99e105d1
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 11:30:19 2018 +0530
+
+    changing in branch sushree
+
+commit 204a103fdbc93d94198838eb3503979b845ef4f2
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 10:57:12 2018 +0530
+
+    added in faris's README
+
+commit 05ef00338fa0f37c5728c7fe20a574112a82c93d
+Merge: 76d4102 6ac7bd4
+Author: lakshmi <luckyrocks6644@yahoo.com>
+Date:   Wed Jan 3 10:49:24 2018 +0530
+
+    change done
+
+commit 76d4102eb701dd75bcd9ec07beef6fd63a28f054
+Author: lakshmi <luckyrocks6644@yahoo.com>
+Date:   Wed Jan 3 10:47:57 2018 +0530
+
+    new change
+
+dbit@it6-31:~/Desktop/my-project-demo$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+dbit@it6-31:~/Desktop/my-project-demo$ git branch
+* master
+  sushree
+dbit@it6-31:~/Desktop/my-project-demo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+dbit@it6-31:~/Desktop/my-project-demo$ git merge sushree
+Updating 204a103..c2942fb
+Fast-forward
+ test.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+dbit@it6-31:~/Desktop/my-project-demo$ git log
+commit c2942fbcd6f4a3f30d3af0813289fedd99e105d1
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 11:30:19 2018 +0530
+
+    changing in branch sushree
+
+commit 204a103fdbc93d94198838eb3503979b845ef4f2
+Author: sushree <sushree@dbit.in>
+Date:   Wed Jan 3 10:57:12 2018 +0530
+
+    added in faris's README
+
+commit 05ef00338fa0f37c5728c7fe20a574112a82c93d
+Merge: 76d4102 6ac7bd4
+Author: lakshmi <luckyrocks6644@yahoo.com>
+Date:   Wed Jan 3 10:49:24 2018 +0530
+
+    change done
+
+commit 76d4102eb701dd75bcd9ec07beef6fd63a28f054
+Author: lakshmi <luckyrocks6644@yahoo.com>
+Date:   Wed Jan 3 10:47:57 2018 +0530
+
+    new change
+
+dbit@it6-31:~/Desktop/my-project-demo$ git checkout 204a103fdbc93d94198838eb3503979b845ef4f2
+Note: checking out '204a103fdbc93d94198838eb3503979b845ef4f2'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 204a103... added in faris's README
+dbit@it6-31:~/Desktop/my-project-demo$ ls
+README.md  test.txt
+dbit@it6-31:~/Desktop/my-project-demo$ nano README.md 
+dbit@it6-31:~/Desktop/my-project-demo$ y
+y: command not found
+dbit@it6-31:~/Desktop/my-project-demo$ gto checkout master
+No command 'gto' found, did you mean:
+ Command 'gtg' from package 'gtg' (universe)
+ Command 'gtf' from package 'xserver-xorg-core' (main)
+ Command 'go' from package 'golang-go' (main)
+ Command 'geo' from package 'rheolef' (universe)
+ Command 'gt' from package 'genometools' (universe)
+ Command 'gtv' from package 'smpeg-gtv' (universe)
+ Command 'gpo' from package 'gpodder' (universe)
+ Command 'gco' from package 'gco' (universe)
+ Command 'gt5' from package 'gt5' (universe)
+ Command 'goo' from package 'goo' (universe)
+gto: command not found
+dbit@it6-31:~/Desktop/my-project-demo$ git checkout master
+Previous HEAD position was 204a103... added in faris's README
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+dbit@it6-31:~/Desktop/my-project-demo$ cd ..
+dbit@it6-31:~/Desktop$ mkdir git-book
+dbit@it6-31:~/Desktop$ cd g*
+dbit@it6-31:~/Desktop/git-book$ cd git-book
+bash: cd: git-book: No such file or directory
+dbit@it6-31:~/Desktop/git-book$ la -al
+total 8
+drwxrwxr-x 2 dbit dbit 4096 Jan  3 11:57 .
+drwxr-xr-x 6 dbit dbit 4096 Jan  3 11:57 ..
+dbit@it6-31:~/Desktop/git-book$ git init
+Initialized empty Git repository in /home/dbit/Desktop/git-book/.git/
+dbit@it6-31:~/Desktop/git-book$ ls -al
+total 12
+drwxrwxr-x 3 dbit dbit 4096 Jan  3 11:59 .
+drwxr-xr-x 6 dbit dbit 4096 Jan  3 11:57 ..
+drwxrwxr-x 7 dbit dbit 4096 Jan  3 11:59 .git
+dbit@it6-31:~/Desktop/git-book$ cd .git
+dbit@it6-31:~/Desktop/git-book/.git$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+dbit@it6-31:~/Desktop/git-book/.git$ git remote add origin https://github.com/sushreesatapathy/git-book.git
+dbit@it6-31:~/Desktop/git-book/.git$ git remote add origin https://github.com/sushreesatapathy/git-book.git
+fatal: remote origin already exists.
+dbit@it6-31:~/Desktop/git-book/.git$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+dbit@it6-31:~/Desktop/git-book/.git$ cd ..
+dbit@it6-31:~/Desktop/git-book$ git remote add origin https://github.com/sushreesatapathy/git-book.git
+fatal: remote origin already exists.
+dbit@it6-31:~/Desktop/git-book$ touch README.md
+dbit@it6-31:~/Desktop/git-book$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+dbit@it6-31:~/Desktop/git-book$ git status -s
+?? README.md
+dbit@it6-31:~/Desktop/git-book$ mkdir chapter 1
+dbit@it6-31:~/Desktop/git-book$ mkdir chapter 2
+mkdir: cannot create directory ‘chapter’: File exists
+dbit@it6-31:~/Desktop/git-book$ mkdir chapter 3
+mkdir: cannot create directory ‘chapter’: File exists
+dbit@it6-31:~/Desktop/git-book$ ls
+1  2  3  chapter  README.md
+dbit@it6-31:~/Desktop/git-book$ mkdir chapter1
+dbit@it6-31:~/Desktop/git-book$ mkdir chapter2
+dbit@it6-31:~/Desktop/git-book$ mkdir chapter3
+dbit@it6-31:~/Desktop/git-book$ touch chapter1/README.md
+dbit@it6-31:~/Desktop/git-book$ touch chapter2/README.md
+dbit@it6-31:~/Desktop/git-book$ touch chapter3/README.md
+dbit@it6-31:~/Desktop/git-book$ open .
+Couldn't get a file descriptor referring to the console
+dbit@it6-31:~/Desktop/git-book$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+	chapter1/
+	chapter2/
+	chapter3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+dbit@it6-31:~/Desktop/git-book$ gedit README.md
+dbit@it6-31:~/Desktop/git-book$ git add .
+dbit@it6-31:~/Desktop/git-book$ git commit -m "Initial commit"
+[master (root-commit) 41f7b7e] Initial commit
+ 4 files changed, 17 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 chapter1/README.md
+ create mode 100644 chapter2/README.md
+ create mode 100644 chapter3/README.md
+dbit@it6-31:~/Desktop/git-book$ gedit README.md
+dbit@it6-31:~/Desktop/git-book$ git add .
+dbit@it6-31:~/Desktop/git-book$ git commit -m "Initial2 commit"
+[master 23a1dc1] Initial2 commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dbit@it6-31:~/Desktop/git-book$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 787 bytes | 0 bytes/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/sushreesatapathy/git-book.git
+ * [new branch]      master -> master
+dbit@it6-31:~/Desktop/git-book$ gedit README.md 
+dbit@it6-31:~/Desktop/git-book$ git add .
+dbit@it6-31:~/Desktop/git-book$ git commit -m "Initial3 commit"
+[master ba9afcb] Initial3 commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dbit@it6-31:~/Desktop/git-book$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 310 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+   23a1dc1..ba9afcb  master -> master
+dbit@it6-31:~/Desktop/git-book$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Everything up-to-date
+dbit@it6-31:~/Desktop/git-book$ cd chapter1
+dbit@it6-31:~/Desktop/git-book/chapter1$ gedit README.md
+dbit@it6-31:~/Desktop/git-book/chapter1$ gedit README.md
+dbit@it6-31:~/Desktop/git-book/chapter1$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbit@it6-31:~/Desktop/git-book/chapter1$ git add .
+dbit@it6-31:~/Desktop/git-book/chapter1$ git commit -m "added chapter 1"
+[master 2c36371] added chapter 1
+ 1 file changed, 15 insertions(+)
+dbit@it6-31:~/Desktop/git-book/chapter1$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 583 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+   ba9afcb..2c36371  master -> master
+dbit@it6-31:~/Desktop/git-book/chapter1$ git add .
+dbit@it6-31:~/Desktop/git-book/chapter1$ git commit -m "added image  chapter 1"
+[master 525977c] added image  chapter 1
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 chapter1/.Rhistory
+dbit@it6-31:~/Desktop/git-book/chapter1$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 525 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+   2c36371..525977c  master -> master
+dbit@it6-31:~/Desktop/git-book/chapter1$ git add .
+dbit@it6-31:~/Desktop/git-book/chapter1$ git commit -m "added chapter 2"
+On branch master
+Changes not staged for commit:
+	modified:   ../chapter2/README.md
+
+no changes added to commit
+dbit@it6-31:~/Desktop/git-book/chapter1$ cd ../chapter2
+dbit@it6-31:~/Desktop/git-book/chapter2$ git add .
+dbit@it6-31:~/Desktop/git-book/chapter2$ git commit -m "added chapter 2"
+[master 760b728] added chapter 2
+ 1 file changed, 13 insertions(+)
+dbit@it6-31:~/Desktop/git-book/chapter2$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 440 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+   525977c..760b728  master -> master
+dbit@it6-31:~/Desktop/git-book/chapter2$ cd ..
+dbit@it6-31:~/Desktop/git-book$ git branch c3-quiz
+dbit@it6-31:~/Desktop/git-book$ git branch
+  c3-quiz
+* master
+dbit@it6-31:~/Desktop/git-book$ gedit chapter3/README.md
+dbit@it6-31:~/Desktop/git-book$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   chapter3/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbit@it6-31:~/Desktop/git-book$ git checkout cs-quiz
+error: pathspec 'cs-quiz' did not match any file(s) known to git.
+dbit@it6-31:~/Desktop/git-book$ git checkout c3-quiz
+M	chapter3/README.md
+Switched to branch 'c3-quiz'
+dbit@it6-31:~/Desktop/git-book$ git status
+On branch c3-quiz
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   chapter3/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbit@it6-31:~/Desktop/git-book$ git add .
+dbit@it6-31:~/Desktop/git-book$ git commit -m "added quiz to quiz branch"
+[c3-quiz 319af65] added quiz to quiz branch
+ 1 file changed, 9 insertions(+)
+dbit@it6-31:~/Desktop/git-book$ git push origin c3-quiz
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 394 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+ * [new branch]      c3-quiz -> c3-quiz
+dbit@it6-31:~/Desktop/git-book$ gti branch
+No command 'gti' found, did you mean:
+ Command 'ti' from package 'ticgit' (universe)
+ Command 'gsi' from package 'gambc' (universe)
+ Command 'gtv' from package 'smpeg-gtv' (universe)
+ Command 'gt5' from package 'gt5' (universe)
+ Command 'gt' from package 'genometools' (universe)
+ Command 'gtf' from package 'xserver-xorg-core' (main)
+ Command 'git' from package 'git' (main)
+ Command 'bti' from package 'bti' (universe)
+ Command 'gtg' from package 'gtg' (universe)
+ Command 'gri' from package 'gri' (universe)
+gti: command not found
+dbit@it6-31:~/Desktop/git-book$ git branch
+* c3-quiz
+  master
+dbit@it6-31:~/Desktop/git-book$ git checkout master
+Switched to branch 'master'
+dbit@it6-31:~/Desktop/git-book$ gedit chapter3/README.md
+dbit@it6-31:~/Desktop/git-book$ git add .
+dbit@it6-31:~/Desktop/git-book$ git commit -m "Directed link to c3-quiz"
+[master 287dd94] Directed link to c3-quiz
+ 1 file changed, 5 insertions(+)
+dbit@it6-31:~/Desktop/git-book$ git log --all --decorate --oneline --graph
+* 287dd94 (HEAD -> master) Directed link to c3-quiz
+| * 319af65 (origin/c3-quiz, c3-quiz) added quiz to quiz branch
+|/  
+* 760b728 (origin/master) added chapter 2
+* 525977c added image  chapter 1
+* 2c36371 added chapter 1
+* ba9afcb Initial3 commit
+* 23a1dc1 Initial2 commit
+* 41f7b7e Initial commit
+dbit@it6-31:~/Desktop/git-book$ git config alias.adog "log --all --decorate --oneline --graph"
+dbit@it6-31:~/Desktop/git-book$ git adog
+* 287dd94 (HEAD -> master) Directed link to c3-quiz
+| * 319af65 (origin/c3-quiz, c3-quiz) added quiz to quiz branch
+|/  
+* 760b728 (origin/master) added chapter 2
+* 525977c added image  chapter 1
+* 2c36371 added chapter 1
+* ba9afcb Initial3 commit
+* 23a1dc1 Initial2 commit
+* 41f7b7e Initial commit
+dbit@it6-31:~/Desktop/git-book$ git push origin master
+Username for 'https://github.com': sushree@dbit
+Password for 'https://sushree@dbit@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/sushreesatapathy/git-book.git/'
+dbit@it6-31:~/Desktop/git-book$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 379 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+   760b728..287dd94  master -> master
+dbit@it6-31:~/Desktop/git-book$ git merge c3-quiz
+Auto-merging chapter3/README.md
+CONFLICT (content): Merge conflict in chapter3/README.md
+Automatic merge failed; fix conflicts and then commit the result.
+dbit@it6-31:~/Desktop/git-book$ gedit chapter3/README.md
+dbit@it6-31:~/Desktop/git-book$ git add .
+dbit@it6-31:~/Desktop/git-book$ git commit -m "merged master and c3-quiz branches"
+[master a45e535] merged master and c3-quiz branches
+dbit@it6-31:~/Desktop/git-book$ gedit adog
+dbit@it6-31:~/Desktop/git-book$ git adog
+*   a45e535 (HEAD -> master) merged master and c3-quiz branches
+|\  
+| * 319af65 (origin/c3-quiz, c3-quiz) added quiz to quiz branch
+* | 287dd94 (origin/master) Directed link to c3-quiz
+|/  
+* 760b728 added chapter 2
+* 525977c added image  chapter 1
+* 2c36371 added chapter 1
+* ba9afcb Initial3 commit
+* 23a1dc1 Initial2 commit
+* 41f7b7e Initial commit
+dbit@it6-31:~/Desktop/git-book$ git push origin master
+Username for 'https://github.com': sushree@dbit.in
+Password for 'https://sushree@dbit.in@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 470 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sushreesatapathy/git-book.git
+   287dd94..a45e535  master -> master
+dbit@it6-31:~/Desktop/git-book$ 
+
